@@ -1,4 +1,23 @@
-# Suppr MCP - Usage Guide | 提供文档翻译及中文搜Pubmed的MCP服务 | Suppr超能文献
+# Suppr MCP - Academic literature search and document translation MCP server
+
+Suppr MCP is a Model Context Protocol server for the Suppr API. It lets MCP-compatible clients such as Claude Desktop call Suppr document translation and PubMed-oriented literature search workflows from an AI assistant session.
+
+Core capabilities:
+
+- Create, inspect, list, and stop document translation tasks.
+- Search academic literature with natural-language queries through Suppr's literature retrieval API.
+- Return structured metadata such as title, abstract, DOI, PMID, authors, journal, publication year, and related document fields.
+
+Security and network access:
+
+- This server requires a `SUPPR_API_KEY` environment variable.
+- It makes outbound HTTPS requests to the Suppr API only when a tool is invoked.
+- It does not require elevated local permissions and does not use `--dangerously-skip-permissions`.
+- Submitted document URLs or files are processed by the Suppr API according to the product/API terms.
+
+License: MIT.
+
+---
 
 ## Quick Start
 
